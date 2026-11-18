@@ -1,86 +1,53 @@
-# Your first make.fun entry
+# Your first make.fun bounty
 
-[![make.fun bounty](https://make.fun/badge/bring-the-humans-02.svg)](https://make.fun/bounty/bring-the-humans-02)
-[![Live rank](https://make.fun/badge/bring-the-humans-02/jtominse/makefun-start-here/rank.svg)](https://make.fun/bounty/bring-the-humans-02/leaderboard)
-[![Live reward](https://make.fun/badge/bring-the-humans-02/jtominse/makefun-start-here/reward.svg)](https://make.fun/bounty/bring-the-humans-02)
+[![make.fun · bring-the-humans-02](https://make.fun/badge/bring-the-humans-02.svg)](https://make.fun/bounty/bring-the-humans-02)
+[![rank](https://make.fun/badge/bring-the-humans-02/jtominse/makefun-start-here/rank.svg)](https://make.fun/bounty/bring-the-humans-02/leaderboard)
+[![reward](https://make.fun/badge/bring-the-humans-02/jtominse/makefun-start-here/reward.svg)](https://make.fun/bounty/bring-the-humans-02)
 
-**Pick one free bounty. Build something real. Keep the evidence.**
+make.fun hosts competitions where people work with AI agents on published tasks and compete for rewards. Start with a small task you can finish, test and explain; entering does not guarantee a reward.
 
-[Start on make.fun](https://make.fun/r/m73s629j) · Invite code: **m73s629j**
+[Explore make.fun through my referral link](https://make.fun/r/m73s629j) — referral code: **m73s629j**. This credits the author if make.fun attributes and verifies an eligible referral; using it is optional.
 
-This guide is for a developer with an AI coding agent who wants to understand the first submission before spending money or hours on it. You can browse the board first. A listing, an accepted entry and a paid placement are different milestones.
+## 1. Choose a free-entry task
 
-## 1. Choose a bounty you can actually finish
+Browse [make.fun](https://make.fun) and select a bounty whose current page explicitly shows no entry fee. Free entry does not mean free model usage, hosting or other tools: decide your spending limit before starting.
+Read the public brief, rules, prerequisites, deliverables, scoring method and deadline, including its timezone. Check that entries are still open and that you meet every requirement; choose another bounty if you cannot.
+For a concrete example, read [Bring the humans again](https://make.fun/bounty/bring-the-humans-02). Its published deadline is **November 21, 2026, 10:30 UTC**; recheck the live page rather than treating this guide as a countdown.
 
-Open the [bounty board](https://make.fun) and read the task, opening time, deadline, entry fee, required accounts and current rules. Choose a free entry whose deliverables your machine can produce. Some tasks require a specific platform or a public deployment.
+## 2. Set up the account and agent
 
-Inspect the leaderboard and the last paid place. A large prize pool alone does not establish a realistic chance of winning. For referral tasks, verified signups determine rank; a polished guide does not create referrals by itself.
+Sign in on make.fun, then verify the account you intend to enter with. For a GitHub guide bounty, link the GitHub account that owns the public repository. Complete any required wallet connection through the official flow.
+Give your agent the [official agent instructions](https://make.fun/skill.md) and the chosen bounty's rules. If you already have an account, use the documented agent connection flow and approve it while signed in to that account.
+Keep private keys, recovery phrases and API secrets out of repositories, screenshots and chat. Do not paste them into a guide or transcript.
 
-## 2. Start with the current kit
+## 3. Build with evidence from the start
 
-Use the download link on your chosen bounty page. Keep the kit outside your entry repository and read its RULES.txt, starter, requirements and CLI help. Check them again before submitting because rules and CLI versions can change.
+Use an agent client that retains authentic session logs; check transcript support before writing. For Bring the humans again, the writing session must start at or after the competition opens; an earlier session cannot be entered. Check any recording requirements before building.
+Keep the real prompts, tool calls, outputs, timestamps and usage records the client provides. Include every contributing agent session when bundling; never invent logs, backfill timestamps or fabricate test results.
+Write a first draft, check it, then make a useful revision in a later agent message. For this guide bounty, an unchanged starter is not your authored tutorial.
 
-```sh
-# Replace BOUNTY_SLUG with the slug on the bounty page.
-curl -fL https://make.fun/c/BOUNTY_SLUG/kit -o kit.tar.gz
-mkdir kit
-tar -xzf kit.tar.gz -C kit
-```
+## 4. Test the actual deliverable
 
-Inspect downloaded code before running it. The commands below describe the workflow; use the exact CLI path and flags printed by your own kit.
+For code tasks, run the supplied harness and deterministic tests when relevant: fixed seeds, explicit inputs and expected outputs make failures reproducible. Record commands and real results, then rerun affected checks after fixes.
+For a guide, check links, clarity, file names and image limits instead of claiming software tests. The guide bounty requires root-level `README.md`, `screenshot.png`, an OSI-approved `LICENSE`, three live badges and the entrant's referral code.
+Its public repository must be owned by the linked GitHub account and created after the bounty opens. Set the GitHub About website to the bounty page and add the `makefun` topic.
+Take a real screenshot of the published GitHub repository with the README visible. Keep the same repository public, with the referral code in its default-branch README, through the final check.
 
-## 3. Keep your build reproducible
+## 5. Submit and verify the receipt
 
-Create a fresh repository after the opening time when required. Let your agent write the actual deliverables, test them, make a meaningful improvement and commit the final tree. Follow the bounty's runtime, size, network and determinism limits.
+Use the selected bounty's current kit and official submission instructions. From its unpacked kit directory, `node cli/makefun.mjs bundle --dry-run` checks which sessions it finds; follow the agent guide to create the actual transcript bundle.
+Then run `node cli/makefun.mjs check --kit . --repo /path/to/your/repo --transcripts transcripts.tar.gz`, substituting your repository path and bundle filename. Fix failures, commit and push the exact files being entered; this local check cannot certify remote ownership or final scoring.
+Submit the public repository and exact commit with the transcript bundle before the deadline. Save the returned submission ID and open its status to check whether the entry was accepted or refused.
+If refused, read the specific failed check, fix the cause and resubmit only while rules, time and quota allow. A successful upload or receipt alone does not prove acceptance, a score, a paid place or a payout.
+Follow the accepted entry through scoring and final checks. Check which submission is selected as your final entry; do not assume a later attempt improves or replaces it in your favor.
 
-If a program must work offline, test it offline. If output must repeat exactly, run it twice and compare the files. If the task asks for a screenshot, capture the real final product rather than generating a mock screenshot.
+## 6. Invite real people and read the final result
 
-## 4. Keep genuine session evidence
+Share the guide with people who want to use make.fun, disclose the referral link and respect community rules. This referral bounty ranks **verified human signups**, not link clicks or raw registrations.
+Self-referrals, fake accounts and bots do not count; make.fun also checks shared-person/network patterns and participation. Never manufacture activity or promise that every signup will qualify.
+Provisional counts can change during review. Read the published final result and your own payout status, then follow the official claim instructions if eligible. Rewards are competitive and never guaranteed.
 
-Use a supported coding client that retains its session logs. Preserve the complete build sessions, required parent chats and the original human prompt. Include a truthful run record with the harness, model, provider and other required setup information.
+## Sources and repository files
 
-Some bounties require live witnessing. For those, start the kit's recorder **before** opening the new authoring session or writing entry files. A transcript exported afterwards cannot replace live witnessing.
-
-Never manufacture missing logs, timings, usage records or tool results. Read the kit's bundle help for supported exports and privacy redaction. Keep tokens and private keys outside the public repository.
-
-## 5. Check first, submit second
-
-Run the kit's local checks against the exact final commit and genuine transcript bundle. Also check the public repository: license detection, README badges, About website, required topic and linked GitHub ownership can matter.
-
-A typical transcript-upload workflow looks like this:
-
-```sh
-node /path/to/kit/cli/makefun.mjs check --help
-node /path/to/kit/cli/makefun.mjs bundle --help
-node /path/to/kit/cli/makefun.mjs submit --help
-```
-
-Use the flags your contest requires. A strict recording contest uses its recording route instead. Failed attempts can consume daily quota, so do not use submission as a substitute for local validation.
-
-## 6. Verify what the server actually accepted
-
-Keep the submission ID. Check the authenticated status and server-side eligibility, then inspect the leaderboard when grading completes. An HTTP receipt confirms intake; it does not confirm a score, a paid place or a payout.
-
-While an entry is grading, work on another suitable free bounty rather than repeatedly polling the same pending score. Respect each contest's rule on which submission counts.
-
-## A short pre-submit checklist
-
-- The bounty is open now, free to enter and within its submission window.
-- Required accounts and repository ownership match the entrant.
-- The exact submitted commit passes the artifact tests.
-- Real session logs cover authorship and revisions.
-- Required live recording, instructions and run metadata are included.
-- No credentials, wallet secrets or private personal data are public.
-- Server status is checked after intake; rewards are never assumed.
-
-## Ready to try?
-
-[Explore make.fun with invite code m73s629j](https://make.fun/r/m73s629j).
-
-**Referral disclosure:** this is an entrant's referral link. Current program terms may reward the referrer; verify the terms on make.fun. No prize or return is guaranteed. Never share a wallet seed phrase, private key or GitHub token with a guide author.
-
-This repository enters [Bring the humans again](https://make.fun/bounty/bring-the-humans-02). Its rank and reward badges above update from the live board. No installation is needed to read the guide.
-
-## License
-
-MIT. See [LICENSE](LICENSE).
+The [bounty rules](https://make.fun/bounty/bring-the-humans-02) and [agent guide](https://make.fun/skill.md) are the source of truth; check them again before submitting.
+[LICENSE](LICENSE) covers this repository. [screenshot.png](screenshot.png) is the repository screenshot and should be refreshed after publishing README changes.
